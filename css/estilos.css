@@ -1,0 +1,349 @@
+/* reglas
+selectores
+declaraciones
+propiedades
+valores */
+
+/* header {
+    background: pink;
+} */
+
+/* selector de etiqueta (header - section - article - nav) */
+
+/* El siguiente es un selector
+body header div nav ol li a  {} */
+
+/* selector de clase . */
+
+/* .portafolio  */
+
+/* selector de id  */
+/* #portafolio */
+
+/* gris oscuro = #1d252c
+gris claro = #626262
+background gris = #1b2127 */
+/* celeste = #026fff */
+
+/* Los valores más comunes que puede recibir la propiedad display son:
+
+block: el elemento intenta abarcar todo el ancho posible.
+inline: reduce su tamaño exclusivamente hasta lo que abarca su contenido, descartando las propiedades width y height.
+inline-block: combina lo mejor de block e inline, ya que respeta las dimensiones indicadas en las propiedades width y height, pero coloca el elemento en línea (al costado) de elementos hermanos que también tengan display: inline o inline-block.
+flex: asume algunas propiedades por defecto que favorecen la alineación de los elementos internos.
+grid: similar a flex, asume algunas propiedades por defecto organizando los contenidos en filas y columnas.
+none: oculta el elemento. */
+
+/* Flex funciona con respecto de sus padres, y esto afectará a los hijos directos
+Si existen varios elementos , estos estarán uno al lado del otro, perderán la dimensión configurada
+
+flex-direction: Dirección del flex, puede ser row (fila) o column (columna)
+flex-shrink: Propiedad utilizada en los hijos que posean el padre la propiedad display flex, identifica la capacidad de encogimiento. 0 (no cambia el tamaño) y 1 (cambia el tamaño de los elementos)
+flex-wrap: Propiedad del elemento padre, puede ser nowrap (los elementos no caen a la parte inferior) o wrap (los elementos se acomodan al tamaño de la ventana) */
+
+/* flex-start: para alinear todos los elementos hacia el inicio del espacio disponible.
+flex-end: para alinear todos los elementos hacia el final, a la derecha.
+center: para alinear todos los elementos al centro del espacio disponible.
+space-between: para distribuir los elementos con un espacio proporcional e igual entre ellos.
+space-evenly: para distribuir los elementos con un espacio proporcional e igual entre ellos (incluyendo el primer y último elementos con respecto a los extremos del espacio disponible).
+space-around: similar a space-evenly pero tanto en el primero como en el último elemento, el espacio hacia los extremos es la mitad del espacio usado entre los elementos. */
+
+/* Similar a como sucede con justify-content, es posible alinear y distribuir los elementos internos en el espacio vertical disponible usando la propiedad align-items, que puede tomar también los valores de: flex-start, flex-end y center.
+
+Algo que es muy importante y se debe tener en cuenta a la hora de usar align-items y justify-content es que dependiendo de la propiedad flex-direction que se haya definido, el efecto de ambos se invierte, no en cuanto a sus elementos internos, sino en cuanto a si se debe usar uno u otro de manera vertical u horizontal.
+
+IMPORTANTE: Cuando la propiedad flex-direction se ha definido como column, la propiedad justify-content ya no va a aplicar sobre la alineación horizontal, sino sobre la vertical. Y align-items ya no aplicaría sobre la alineación vertical sino la horizontal. Se intercambian sus efectos.
+
+Para centrar completamente los elementos internos de manera vertical y horizontal en su elemento padre, debemos usar el valor center en ambas propiedades. */
+
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 1.5;
+    letter-spacing: -.2px;
+    color: white;
+    margin: 0;
+    
+    /* text-transform: uppercase;
+    text-decoration: underline; */
+}
+
+h1 strong {
+    color: #026fff;
+}
+
+h2 {
+    color: #026fff;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+
+}
+
+.hero {
+    height: 300px;
+    /* background-image: url('../images/hero.jpg'); */
+    background-color: #1b2127;
+    /* background-size: 500px 300px; */
+    /* background-repeat: no-repeat; */
+    /* background-position-x: right; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image {
+    object-fit: cover;
+}
+
+
+.portfolio {
+    background: #fafafa;
+    padding: 20px;
+}
+
+.project {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 15px;
+    padding: 20px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-course,
+.project-date,
+.project-url {
+    margin: 10px 0;
+}
+
+.prject-description {
+    font-size: 20px;
+}
+
+.project strong {
+    font-family: 'Fjalla One', sans-serif;
+
+}
+
+/* .project-date {
+    margin: 10px;
+} */
+
+.project-title {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-details {
+    width: 500px;
+}
+
+.project-imageContainer {
+    width: 500px;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+}
+
+.header {
+    background-color: #1b2127;
+    color: white;
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    height: inherit;
+}
+
+.header ol {
+    display: flex;
+    height: inherit;
+}
+
+.header ol li {
+    height: inherit;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+}
+
+.footer {
+    color: white;
+    background-color: #1b2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.footer a {
+    color: white;
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event {
+    margin: 10px;
+    width: 480px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f4fbff;
+}
+
+.event img {
+    
+    image-orientation: from-image;
+    width: 480px;
+    height: 200px; 
+    /*object-fit: cover;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);  Chrome, Safari, Opera */
+}
+
+.event-detail {
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.event-description {
+    text-align: left;
+}
+
+.event-url {
+    color: 056fff;
+    border: 1px solid ;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.event-list-title {
+    margin-left: 20px;
+}
+
+.contact {
+    background-color:  #056fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social {
+    /* border: 1px solid red; */
+}
+
+.social-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border: 1px solid white;
+    background-size: 50px 50px;
+}
+
+.social-link.twitter {
+    background-image: url('../images/twitter.svg');
+}
+
+.social-link.facebook {
+    background-image: url('../images/facebook.svg');
+}
+
+.social-link.instagram {
+    background-image: url('../images/instagram.svg');
+}
+
+.social-link.github {
+    background-image: url('../images/github.svg');
+}
+
+.form-email input {
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px 20px 10px 25px;
+    background-image: url('../images/envelope.svg');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+}
+
+.form-email button {
+    display: block;
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+    /* margin: 10px auto 0; */
+}
+
+.form-email h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    /* border: 1px solid red; */
+    width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
